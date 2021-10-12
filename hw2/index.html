@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Photo Album</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="row">
+    <h1>My Photo Album </h1>
+    <ul class="control">
+      <li class="list" id='l1' onclick="changelist('l1');change2Fav()">FAVORITE</li>
+      <li class="list" id='l2' onclick="changelist('l2');change2Pet()">PET</li>
+      <li class="list" id='l3' onclick="alert('這是一個空相簿')">TRAVEL</li>
+    </ul>
+  </div>
+  <div class="bigbox">
+    <div class="box1">
+      <img class="photo" src="" id='p1' onclick="showimg(0)">
+      <img class="photo" src="" id='p2' onclick="showimg(1)">
+      <img class="photo" src="" id='p3' onclick="showimg(2)">
+      <img class="photo" src="" id='p4' onclick="showimg(3)">
+      <img class="photo" src="" id='p5' onclick="showimg(4)">
+      <img class="photo" src="" id='p6' onclick="showimg(5)">
+      <img class="photo" src="" id='p7' onclick="showimg(6)">
+      <img class="photo" src="" id='p8' onclick="showimg(7)">
+
+    </div>
+    <div class="box2">
+      <img src="" id="display">
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
