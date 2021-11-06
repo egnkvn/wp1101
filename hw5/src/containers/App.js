@@ -36,6 +36,13 @@ function App() {
             setResult(Result + x.target.name);
         setDone(0);
     }
+    function operator(x) {
+        if (Result == "Error")
+            setResult("" + x.target.value);
+        else
+            setResult(Result + x.target.name);
+        setDone(0);
+    }
 
     function Clear() {
         setResult("");
@@ -71,7 +78,7 @@ function App() {
                 if (x == "Infinity")
                     setResult("Error");
                 else {
-                    x = x + "*100";
+                    x = x + "/100";
                     setResult(eval(x).toString());
                 }
             } catch (error) {
@@ -115,22 +122,22 @@ function App() {
             <Button name="7" onClick={Click} className={classes.button}>7</Button>
             <Button name="8" onClick={Click} className={classes.button}>8</Button>
             <Button name="9" onClick={Click} className={classes.button}>9</Button>
-            <Button name="/" onClick={Click} className={classes.button}>/</Button>
+            <Button name="/" onClick={operator} className={classes.button}>/</Button>
 
             <Button name="4" onClick={Click} className={classes.button}>4</Button>
             <Button name="5" onClick={Click} className={classes.button}>5</Button>
             <Button name="6" onClick={Click} className={classes.button}>6</Button>
-            <Button name="*" onClick={Click} className={classes.button}>*</Button>
+            <Button name="*" onClick={operator} className={classes.button}>*</Button>
 
             <Button name="1" onClick={Click} className={classes.button}>1</Button>
             <Button name="2" onClick={Click} className={classes.button}>2</Button>
             <Button name="3" onClick={Click} className={classes.button}>3</Button>
-            <Button name="-" onClick={Click} className={classes.button}>-</Button>
+            <Button name="-" onClick={operator} className={classes.button}>-</Button>
 
             <Button name="0" onClick={Click} className={classes.button}>0</Button>
             <Button name="." onClick={Click} className={classes.button}>.</Button>
             <Button onClick={calculate} className={classes.button}>=</Button>
-            <Button name="+" onClick={Click} className={classes.button}>+</Button>
+            <Button name="+" onClick={operator} className={classes.button}>+</Button>
 
         </Container >
     )
