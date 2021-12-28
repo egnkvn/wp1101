@@ -19,6 +19,9 @@ const Subscription = {
    * Subscribe for task deletion
    */
   // TODO 6.2 Add taskDeleted resolver
+  taskDeleted: {
+    
+  }
 };
 
 export default Subscription;
