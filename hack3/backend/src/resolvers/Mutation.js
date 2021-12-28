@@ -36,7 +36,7 @@ const Mutation = {
   deleteTask: async (parent, { id }, { taskModel, pubSub }) => {
     const task = await taskModel.findOneAndRemove({ id }, { returnDocument: "after" });
     pubSub.publish("TASK_DELETED", {
-      taskDeleted: task,
+      taskDeleted: id,
     });
     return id;
   }
