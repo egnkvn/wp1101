@@ -35,7 +35,7 @@ router.get('/allPosts', async (req, res) => {
 router.get('/postDetail', async (req, res) => {
     try {
         const request = req.query;
-        const mes = await Post.find({ postid: request.pid });
+        const mes = await Post.find({ postId: request.pid });
         if (mes.length == 1) {
             const pd = new Post(mes[0]);
             res.status(200).send({ message: "success", post: pd });

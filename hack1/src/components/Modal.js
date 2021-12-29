@@ -21,7 +21,7 @@ export default function Modal({ restartGame, backToHome, win }) {
         <div className="modal">
             <div className="modalWrapper"></div>
             <div className="modalContent">
-                <div className="modalResult">{ }</div>
+                <div className="modalResult">Game Over</div>
                 <div className="modalBtnWrapper">
                     <div className="modalBtn">Try again</div>
                     <div className="modalBtn">Back to Home</div>

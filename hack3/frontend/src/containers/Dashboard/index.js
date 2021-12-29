@@ -88,9 +88,8 @@ export default function Dashboard() {
         return {
           tasks: prev.tasks.map((task) => {
             if (task.id !== taskDeleted) return task;
-            return {
-              ...task
-            };
+            else
+              return false
           }),
         };
       },

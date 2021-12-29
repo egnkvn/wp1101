@@ -13,7 +13,7 @@ function Post(props) {
   // TODO 3-(2): complete getPostDetail function to get the full information of a post from database
   const getPostDetail = async () => {
     const { data: { message, post }
-    } = await instance.get('/postDetail', { pid });
+    } = await instance.get(`/postDetail`, { params: { pid } });
     console.log(post);
     if (message === 'success') {
       setData(post);
